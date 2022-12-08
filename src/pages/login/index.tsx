@@ -19,6 +19,7 @@ import {
   Row,
   Wrapper
 } from './styles';
+import { IFormData } from './types';
 
 const schema = yup.object({
   email: yup.string().email("email não válido!").required(),
@@ -27,11 +28,11 @@ const schema = yup.object({
 
 export default function Login() {
 
-  const { control, handleSubmit, formState: { errors, isValid } } = useForm({
+  const { control, handleSubmit, formState: { errors, isValid } } = useForm<IFormData>({
     resolver: yupResolver(schema),
     mode: "onChange"
   });
-  const onSubmit = async formData => {
+  const onSubmit = async (formData : IFormData) => {
     try {
       const {data} = await api.get(`users?email=${formData.email}&senha=${formData.password}`)
       if(data.length === 1){
@@ -48,7 +49,7 @@ export default function Login() {
 
   return (
     <>
-      <Header />
+      <Header autenticado={false}/>
       <Container>
         <Column>
           <Title>
@@ -66,7 +67,7 @@ export default function Login() {
                 placeholder='E-mail'
                 leftIcon={<MdEmail />}
                 name='email'
-                errorMessage={errors?.email}
+                errorMessage={errors?.email?.message}
               />
               <Input
                 control={control}
@@ -74,7 +75,7 @@ export default function Login() {
                 placeholder='Senha'
                 leftIcon={<MdLock />}
                 name='password'
-                errorMessage={errors?.password}
+                errorMessage={errors?.password?.message}
               />
               <Button title='Entrar' variant='secondary' type="submit" />
             </form>

@@ -15,7 +15,7 @@ export default function Home() {
     }
 
     return (<>
-        <Header></Header>
+        <Header autenticado={false}></Header>
         <Container>
             <div>
                 <Title>
