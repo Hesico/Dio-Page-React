@@ -3,6 +3,7 @@ import logo from '../../assets/logo-dio.png';
 import { useNavigate } from 'react-router-dom';
 import {IHeader} from "./types"
 import Button from '../Button';
+import Perfil from "../../assets/perfil.png"
 
 import {
   Container,
@@ -43,7 +44,7 @@ export default function Header({ autenticado } : IHeader) {
         </Row>
         <Row>
           {autenticado ? (
-            <UserPicture src='https://avatars.githubusercontent.com/u/45184516?v=4' />
+            <UserPicture src={Perfil} />
           ) : (
             <>
               <MenuRight href='/'>Home</MenuRight>

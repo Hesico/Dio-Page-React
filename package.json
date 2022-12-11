@@ -1,6 +1,7 @@
 {
   "name": "dio",
   "version": "0.1.0",
+  "homepage" : "Dio-Page-React/",
   "private": true,
   "dependencies": {
     "@hookform/resolvers": "^2.9.10",

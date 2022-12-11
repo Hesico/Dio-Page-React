@@ -1,6 +1,7 @@
 import React from 'react'
 import Card  from '../../components/Card';
 import UserInfo from '../../components/UserInfo';
+import Perfil from "../../assets/perfil.png"
 
 import  Header  from '../../components/Header';
 
@@ -26,10 +27,11 @@ export default function Feed(){
             </Column>
             <Column flex={1}>
               <TitleHighlight> # RANKING 5 TOP DA SEMANA </TitleHighlight>
-                <UserInfo nome="Pablo Henrique" image="https://avatars.githubusercontent.com/u/45184516?v=" percentual={25}/>
-                <UserInfo nome="Pablo Henrique" image="https://avatars.githubusercontent.com/u/45184516?v=" percentual={65}/>
-                <UserInfo nome="Pablo Henrique" image="https://avatars.githubusercontent.com/u/45184516?v=" percentual={45}/>
-                <UserInfo nome="Pablo Henrique" image="https://avatars.githubusercontent.com/u/45184516?v=" percentual={72}/>
+                <UserInfo nome="Henrique" image={Perfil} percentual={25}/>
+                <UserInfo nome="Henrique" image={Perfil}  percentual={65}/>
+                <UserInfo nome="Henrique" image={Perfil}  percentual={45}/>
+                <UserInfo nome="Henrique" image={Perfil}  percentual={72}/>
+                <UserInfo nome="Henrique" image={Perfil}  percentual={100}/>
             </Column>
         </Container>
     </>

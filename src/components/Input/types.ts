@@ -3,6 +3,10 @@ import React from "react";
 export interface IInput extends React.InputHTMLAttributes<HTMLInputElement>{
     leftIcon?: React.ReactNode;
     name: string;
-    control: any;
+    control?: any;
     errorMessage?: string;
+}
+
+export interface IError{
+    error?: string;
 }

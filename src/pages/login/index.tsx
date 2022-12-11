@@ -28,7 +28,7 @@ const schema = yup.object({
 
 export default function Login() {
 
-  const { control, handleSubmit, formState: { errors, isValid } } = useForm<IFormData>({
+  const { control, handleSubmit, formState: { errors } } = useForm<IFormData>({
     resolver: yupResolver(schema),
     mode: "onChange"
   });

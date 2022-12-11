@@ -4,7 +4,7 @@ import {IInput} from "./types"
 
 export default function Input({ leftIcon, name, control, errorMessage, ...rest } : IInput) {
     return (
-        <Container>
+        <Container error={errorMessage}>
             <InputContainer>
                 {leftIcon ? (<IconContainer>{leftIcon}</IconContainer>) : null}
                 <Controller
@@ -14,7 +14,7 @@ export default function Input({ leftIcon, name, control, errorMessage, ...rest }
                     render={({ field : {value, onChange} }) => <InputText value={value} onChange={onChange} {...rest} />}
                 />
             </InputContainer>
-            {errorMessage ? (<ErrorText>{errorMessage}</ErrorText>) : null}
+            {errorMessage ? (<ErrorText><p>{errorMessage}</p></ErrorText>) : null}
         </Container>
     )
 }
