@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/Dio-Page-React/static/js/main.6bcb0fb5.js",
+    "main.js": "/Dio-Page-React/static/js/main.f2aa7e98.js",
     "static/media/perfil.png": "/Dio-Page-React/static/media/perfil.43c28e8af2387ade9190.png",
     "static/media/Banner.png": "/Dio-Page-React/static/media/Banner.cd15c5ebb0555a31a9fe.png",
     "static/media/capa.png": "/Dio-Page-React/static/media/capa.ad7904cbda8944a32779.png",
     "index.html": "/Dio-Page-React/index.html",
-    "main.6bcb0fb5.js.map": "/Dio-Page-React/static/js/main.6bcb0fb5.js.map"
+    "main.f2aa7e98.js.map": "/Dio-Page-React/static/js/main.f2aa7e98.js.map"
   },
   "entrypoints": [
-    "static/js/main.6bcb0fb5.js"
+    "static/js/main.f2aa7e98.js"
   ]
 }
